@@ -27,7 +27,7 @@ function addRandomTile() {
 
 // 그리드 렌더링
 function renderGrid() {
-  gameContainer.innerHTML = '';
+  gameContainer.innerHTML = ''; // 기존 타일 초기화
   for (let r = 0; r < gridSize; r++) {
     for (let c = 0; c < gridSize; c++) {
       const tile = document.createElement('div');
