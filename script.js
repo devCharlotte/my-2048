@@ -1,5 +1,6 @@
 const gameContainer = document.getElementById('game-container');
-const startButton = document.getElementById('start-button');
+const resetButton = document.getElementById('reset-button');
+const controlButtons = document.querySelectorAll('.control-btn');
 const gridSize = 4; // 4x4 그리드
 let grid = Array(gridSize).fill().map(() => Array(gridSize).fill(0));
 
@@ -43,19 +44,19 @@ function renderGrid() {
   }
 }
 
-// 키보드 이벤트 처리
-function handleKeyPress(event) {
-  switch (event.key) {
-    case 'ArrowUp':
+// 버튼 이벤트 처리
+function handleButtonClick(direction) {
+  switch (direction) {
+    case 'up':
       moveUp();
       break;
-    case 'ArrowDown':
+    case 'down':
       moveDown();
       break;
-    case 'ArrowLeft':
+    case 'left':
       moveLeft();
       break;
-    case 'ArrowRight':
+    case 'right':
       moveRight();
       break;
   }
@@ -63,7 +64,7 @@ function handleKeyPress(event) {
   renderGrid();
 }
 
-// 좌 이동
+// 좌/우/상/하 이동 로직
 function moveLeft() {
   for (let r = 0; r < gridSize; r++) {
     let row = grid[r].filter(val => val !== 0);
@@ -77,7 +78,6 @@ function moveLeft() {
   }
 }
 
-// 우 이동
 function moveRight() {
   for (let r = 0; r < gridSize; r++) {
     let row = grid[r].filter(val => val !== 0);
@@ -91,7 +91,6 @@ function moveRight() {
   }
 }
 
-// 상 이동
 function moveUp() {
   for (let c = 0; c < gridSize; c++) {
     let column = [];
@@ -111,7 +110,6 @@ function moveUp() {
   }
 }
 
-// 하 이동
 function moveDown() {
   for (let c = 0; c < gridSize; c++) {
     let column = [];
@@ -132,10 +130,13 @@ function moveDown() {
 }
 
 // 이벤트 리스너 추가
-startButton.addEventListener('click', () => {
-  initializeGame();
-  document.addEventListener('keydown', handleKeyPress);
+resetButton.addEventListener('click', initializeGame);
+
+controlButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    handleButtonClick(button.dataset.direction);
+  });
 });
 
-// 게임 시작 버튼 표시 후 초기화
+// 게임 초기화
 initializeGame();
