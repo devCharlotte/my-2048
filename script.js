@@ -1,9 +1,11 @@
 const gameContainer = document.getElementById('game-container');
+const startButton = document.getElementById('start-button');
 const gridSize = 4; // 4x4 그리드
 let grid = Array(gridSize).fill().map(() => Array(gridSize).fill(0));
 
 // 초기화 함수
 function initializeGame() {
+  grid = Array(gridSize).fill().map(() => Array(gridSize).fill(0)); // 새로운 게임판 초기화
   addRandomTile();
   addRandomTile();
   renderGrid();
@@ -130,7 +132,10 @@ function moveDown() {
 }
 
 // 이벤트 리스너 추가
-document.addEventListener('keydown', handleKeyPress);
+startButton.addEventListener('click', () => {
+  initializeGame();
+  document.addEventListener('keydown', handleKeyPress);
+});
 
-// 게임 시작
+// 게임 시작 버튼 표시 후 초기화
 initializeGame();
