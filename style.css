@@ -28,26 +28,26 @@ body {
 }
 
 h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 2rem;
+    margin-bottom: 10px;
     color: #333;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 #message {
-    font-size: 1.2rem;
-    margin: 15px 0;
+    font-size: 1rem;
+    margin: 10px 0;
     color: #555;
 }
 
 /* 게임 컨테이너 스타일 */
 #game-container {
-    margin: 20px auto;
-    width: 320px;
-    height: 320px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
+    gap: 10px;
+    width: 320px;
+    height: 320px;
+    margin: 20px auto;
     background: #bbada0;
     padding: 10px;
     border-radius: 15px;
