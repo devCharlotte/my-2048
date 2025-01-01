@@ -1,0 +1,58 @@
+/* 폰트 */
+@font-face {
+    font-family: 'HakgyoansimNadeuriTTF-B';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimNadeuriTTF-B.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* 전체 페이지 스타일 */
+body {
+    font-family: 'HakgyoansimNadeuriTTF-B', Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: #faf8ef;
+    color: #776e65;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 20px;
+    color: #776e65;
+}
+
+/* 게임 컨테이너 스타일 */
+#game-container {
+    margin: 20px auto;
+    width: 320px;
+    height: 320px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    background: #bbada0;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* 그리드 스타일 */
+.grid {
+    width: 70px;
+    height: 70px;
+    background: #cdc1b4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #776e65;
+    border-radius: 5px;
+}
+
+/* 타일 색상 */
+.tile-2 { background: #eee4da; }
+.tile-4 { background: #ede0c8; }
+.tile-8 { background: #f2b179; }
+.tile-16 { background: #f59563; }
+.tile-32 { background: #f67c5f; }
+.tile-64 { background: #f65e3b; }
