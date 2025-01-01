@@ -39,6 +39,25 @@ h1 {
     color: #555;
 }
 
+/* 게임 시작 버튼 스타일 */
+button {
+    font-family: inherit;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    background-color: #ff79c6;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+button:hover {
+    background-color: #ff47b2;
+    box-shadow: 0 4px 10px rgba(255, 121, 198, 0.5);
+}
+
 /* 게임 컨테이너 스타일 */
 #game-container {
     display: grid;
@@ -70,4 +89,11 @@ h1 {
 .tile-2 { background: #eee4da; }
 .tile-4 { background: #ede0c8; }
 .tile-8 { background: #f2b179; color: #fff; }
-.tile-16 { background: #f59563; 
+.tile-16 { background: #f59563; color: #fff; }
+.tile-32 { background: #f67c5f; color: #fff; }
+.tile-64 { background: #f65e3b; color: #fff; }
+.tile-128 { background: #edcf72; color: #fff; }
+.tile-256 { background: #edcc61; color: #fff; }
+.tile-512 { background: #edc850; color: #fff; }
+.tile-1024 { background: #edc53f; color: #fff; }
+.tile-2048 { background: #edc22e; color: #fff; }
