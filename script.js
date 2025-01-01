@@ -44,7 +44,7 @@ function renderGrid() {
   }
 }
 
-// 버튼 이벤트 처리
+// 방향 버튼 처리
 function handleButtonClick(direction) {
   switch (direction) {
     case 'up':
